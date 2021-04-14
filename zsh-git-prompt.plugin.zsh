@@ -12,6 +12,6 @@
 0="${${ZERO:-${0:#$ZSH_ARGZERO}}:-${(%):-%N}}"
 0="${${(M)0:#/*}:-$PWD/$0}"
 
-source $(dirname $0)/zshrc.sh
-ZSH_GIT_PROMPT='%B%m%~%b$(git_super_status) %# '
+source ${0:A:h}/zshrc.sh
+USE_ZSH_GIT_PROMPT=1
 
